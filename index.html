@@ -14,7 +14,28 @@
           border: none;
           height: 2px;
         }
+        input, button {
+       	  background-color: rgb(200,200,200);
+        }
         </style>
+        
+    		<script>
+			function aboutblank() {   
+            	var url = document.getElementById("link").value
+                //alert(url)
+				//var url = link;
+				var win = window.open();
+				win.document.body.style.margin = '0';
+				win.document.body.style.height = '100vh';
+				var iframe = win.document.createElement('iframe');
+				iframe.style.border = 'none';
+				iframe.style.width = '100%';
+				iframe.style.height = '100%'
+				iframe.style.margin = '0';
+				iframe.src = url;
+				win.document.body.appendChild(iframe);
+			}
+		</script>
     </head>
   
     <body style="background-color: rgb(214, 192, 166);">
@@ -27,6 +48,12 @@
       <br>
       <li><a href="https://yakitori422.github.io/pc98th">PC98 Touhou</a></li><sub>Somehow Touhous 1-5 were embedded <i>static</i> websites?? (Really bad lag and input lag though)</sub>
       <li><a href="https://yakitori422.github.io/sloppe">Slope</a></li><sub>Your average Slope website game without the bloatslop everywhere on your screen</sub>
+      
+      <br><br><br><br><br>
+      
+	  <p>about:Blank transform</p>
+  	  <input type="text" id="link" name="link"><br>
+      <button onclick="aboutblank()">about:Blankify</button>
 
 
       <br><br><br><br><br><br><hr><br>
